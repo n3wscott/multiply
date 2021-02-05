@@ -1,0 +1,17 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: multi-viewer
+  labels:
+    duck.tableflip.dev/results: "true"
+# Do not use this role directly. These rules will be added to the "results-viewer" role.
+rules:
+  - apiGroups:
+      - tgik.tgik.io
+    resources:
+      - squares
+      - squares/status
+    verbs:
+      - get
+      - list
+      - watch

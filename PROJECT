@@ -1,0 +1,7 @@
+domain: tgik.io
+repo: github.com/n3wscott/multiply
+resources:
+- group: tgik
+  kind: Square
+  version: v1
+version: "2"

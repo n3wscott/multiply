@@ -1,0 +1,8 @@
+apiVersion: tgik.tgik.io/v1
+kind: Square
+metadata:
+  name: square-sample
+spec:
+  # Add fields here
+  foo: bar
+  base: 5

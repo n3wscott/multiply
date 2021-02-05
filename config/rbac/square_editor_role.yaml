@@ -1,0 +1,30 @@
+# permissions for end users to edit squares.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: square-editor-role
+rules:
+- apiGroups:
+  - tgik.tgik.io
+  resources:
+  - squares
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - tgik.tgik.io
+  resources:
+  - squares/status
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
